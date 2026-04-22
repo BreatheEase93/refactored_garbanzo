@@ -3,14 +3,74 @@ name = "refactored-garbanzo"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Дмитрий Глоба",email = "dima.globa2015@yandex.ru"}
+    {name = "Дмитрий Глоба", email = "dima.globa2015@yandex.ru"}
 ]
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
-]
-
+dependencies = []
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.11,<0.16.0)",
+    "mypy (>=1.20.2,<2.0.0)"
+]
+
+# ==================== RUFF ====================
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+src = ["refactored_garbanzo"]  # ← исправлено (или оставьте "src", если переделали структуру)
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "C4",   # flake8-comprehensions
+]
+ignore = ["E501"]  # line too long (formatter handles this)
+
+[tool.ruff.lint.isort]
+known-first-party = ["refactored_garbanzo"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+# ==================== MYPY ====================
+[tool.mypy]
+# Базовая настройка окружения
+python_version = "3.14"
+namespace_packages = true
+
+# Управление импортами
+ignore_missing_imports = true
+follow_imports = "skip"
+
+# Проверка кода
+disallow_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+warn_return_any = true
+
+# Дополнительные предупреждения
+strict_equality = true
+pretty = true
+show_error_context = true
+
+# Исключения
+exclude = [
+    "build/",
+    "dist/",
+    "venv/",
+    "tests/fixtures/",
+]
