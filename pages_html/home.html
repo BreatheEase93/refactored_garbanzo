@@ -4,19 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .nav.flex-column{
+        .nav.flex-column {
             position: fixed;
-            font-size: 25px;
+            font-size: 20px;
             left: 0;
             top: 0;
             width: 200px;
             height: 100%;
             background: #2c3e50;
-            padding: 20px;
+            padding: 10px;
             z-index: 100;
             margin: 0;
+            list-style: none;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .nav.flex-column .nav-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
     </style>
@@ -35,17 +50,43 @@
     <li class="nav-item">
         <a class="nav-link" href="contacts.html">📞 Контакты</a>
     </li>
+    <li class="nav-item" style=" position: fixed;
+    bottom: 0;">
+    <a class="nav-link" href="contacts.html">👤 Пользователь</a>
+    </li>
 </nav>
 
-<div class="content" style="argin-left: 220px; padding: 20px">
-    <div class="card">
-        <h1>Мой сайт</h1>
-        <p>Боковая панель всегда видна слева. Самый простой вариант!</p>
-    </div>
+<div class="content">
+        <h1 style="text-align: center;">Главная</h1>
+        <h3 style="text-align: center;">Место для продажи товаров</h3>
+    <div class="container text-center">
+        <div class="row row-cols-3" style="gap: 30px">
+            <div class="col-md-3" style="border: 1px solid black; padding: 0px; border-radius: 10px; overflow: hidden">
+              <h2 style="background-color: #f0f0f0; padding: 0px;">Товар 1</h2>
+              <h2>100 $</h2>
+              <p>Какое-то описание</p>
+              <button style="width: 90%; border-radius: 10px; margin: 10px;">Купить</button>
+            </div>
+            <div class="col-md-3" style="border: 1px solid black; padding: 0px; border-radius: 10px; overflow: hidden">
+              <h2 style="background-color: #f0f0f0; padding: 0px;">Товар 1</h2>
+              <h2>100 $</h2>
+              <p>Какое-то описание</p>
+              <button style="width: 90%; border-radius: 10px; margin: 10px;">Купить</button>
+            </div>
+            <div class="col-md-3" style="border: 1px solid black; padding: 0px; border-radius: 10px; overflow: hidden">
+              <h2 style="background-color: #f0f0f0; padding: 0px;">Товар 1</h2>
+              <h2>100 $</h2>
+              <p>Какое-то описание</p>
+              <button style="width: 90%; border-radius: 10px; margin: 10px;">Купить</button>
+            </div>
+            <div class="col-md-3" style="border: 1px solid black; padding: 0px; border-radius: 10px; overflow: hidden">
+              <h2 style="background-color: #f0f0f0; padding: 0px;">Товар 1</h2>
+              <h2>100 $</h2>
+              <p>Какое-то описание</p>
+              <button style="width: 90%; border-radius: 10px; margin: 10px;" >Купить</button>
+            </div>
 
-    <div class="card">
-        <h2>Преимущества</h2>
-        <p>✅ Простота<br>✅ Не нужно нажимать кнопки<br>✅ Меню всегда под рукой</p>
+        </div>
     </div>
 </div>
 
