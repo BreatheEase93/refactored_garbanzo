@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .nav.flex-column{
+            position: fixed;
+            font-size: 25px;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: #2c3e50;
+            padding: 20px;
+            z-index: 100;
+            margin: 0;
+        }
+
+    </style>
 </head>
 <body>
-<ul class="nav flex-column" style="
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 250px;
-        height: 100%;
-        background: #2c3e50;
-        color: white;">
-  <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-link">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-</ul>
+<nav class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link active" href="home.html">🏠 Главная</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="orders.html">📦 Заказы</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="category.html">📂 Категории</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="contacts.html">📞 Контакты</a>
+    </li>
+</nav>
 
-    <!-- Контент -->
-    <div class="content">
-        <div class="card">
-            <h1>Мой сайт</h1>
-            <p>Боковая панель всегда видна слева. Самый простой вариант!</p>
-        </div>
-
-        <div class="card">
-            <h2>Преимущества</h2>
-            <p>✅ Простота<br>✅ Не нужно нажимать кнопки<br>✅ Меню всегда под рукой</p>
-        </div>
+<div class="content" style="argin-left: 220px; padding: 20px">
+    <div class="card">
+        <h1>Мой сайт</h1>
+        <p>Боковая панель всегда видна слева. Самый простой вариант!</p>
     </div>
+
+    <div class="card">
+        <h2>Преимущества</h2>
+        <p>✅ Простота<br>✅ Не нужно нажимать кнопки<br>✅ Меню всегда под рукой</p>
+    </div>
+</div>
+
 
 </body>
 </html>
